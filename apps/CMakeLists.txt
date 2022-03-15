@@ -1,2 +1,2 @@
 add_subdirectory(yscene)
-add_subdirectory(render)
+add_subdirectory(yash)

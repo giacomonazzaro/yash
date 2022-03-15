@@ -308,13 +308,13 @@ inline void apply_diff(Scene_View& scene, const Scene_Hash& diff) {
 
 inline Scene_View create_scene_view(const scene_data& scene) {
   auto scene_view = Scene_View{};
-  scene_view._cameras.reserve(scene.cameras.size());
-  scene_view._instances.reserve(scene.instances.size());
-  scene_view._environments.reserve(scene.environments.size());
-  scene_view._shapes.reserve(scene.shapes.size());
-  scene_view._textures.reserve(scene.textures.size());
-  scene_view._materials.reserve(scene.materials.size());
-  scene_view._subdivs.reserve(scene.subdivs.size());
+  scene_view._cameras.resize(scene.cameras.size());
+  scene_view._instances.resize(scene.instances.size());
+  scene_view._environments.resize(scene.environments.size());
+  scene_view._shapes.resize(scene.shapes.size());
+  scene_view._textures.resize(scene.textures.size());
+  scene_view._materials.resize(scene.materials.size());
+  scene_view._subdivs.resize(scene.subdivs.size());
 
   for (int i = 0; i < scene.cameras.size(); i++) {
     scene_view._cameras[i] = &scene.cameras[i];
@@ -342,13 +342,13 @@ inline Scene_View create_scene_view(const scene_data& scene) {
 
 inline Scene_View create_scene_view(const Scene_Hash& scene) {
   auto scene_view = Scene_View{};
-  scene_view._cameras.reserve(scene.cameras().size());
-  scene_view._instances.reserve(scene.instances().size());
-  scene_view._environments.reserve(scene.environments().size());
-  scene_view._shapes.reserve(scene.shapes().size());
-  scene_view._textures.reserve(scene.textures().size());
-  scene_view._materials.reserve(scene.materials().size());
-  scene_view._subdivs.reserve(scene.subdivs().size());
+  scene_view._cameras.resize(scene.cameras().size());
+  scene_view._instances.resize(scene.instances().size());
+  scene_view._environments.resize(scene.environments().size());
+  scene_view._shapes.resize(scene.shapes().size());
+  scene_view._textures.resize(scene.textures().size());
+  scene_view._materials.resize(scene.materials().size());
+  scene_view._subdivs.resize(scene.subdivs().size());
 
   for (int i = 0; i < scene.num_cameras(); i++) {
     scene_view._cameras[i] = &scene.cameras(i);

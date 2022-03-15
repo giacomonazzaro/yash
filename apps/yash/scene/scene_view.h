@@ -2,7 +2,7 @@
 
 #include <yocto/yocto_scene.h>
 
-#include "view.h"
+#include <view.h>
 
 namespace yash {
 using namespace yocto;
