@@ -1,17 +1,14 @@
 #include <yocto/yocto_cli.h>
-#include <yocto/yocto_math.h>
 #include <yocto/yocto_parallel.h>
-#include <yocto/yocto_scene.h>
 #include <yocto/yocto_sceneio.h>
-#include <yocto/yocto_shape.h>
-#include <yocto/yocto_trace.h>
 
 #if YOCTO_OPENGL == 1
 #include <yocto_gui/yocto_glview.h>
 #endif
 
-#include "scene_hash.h"
-#include "scene_view.h"
+#include "render.h"
+#include "scene/scene_hash.h"
+#include "scene/scene_view.h"
 
 using namespace yocto;
 using namespace yash;
